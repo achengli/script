@@ -17,12 +17,12 @@ function echoerr(){
   exit -1
 }
 
-function trim(){
+function trim() {
   local o=$(echo $1 | grep -Eo '^[^[:blank:]].+$' | grep -Eo '.+[^[:blank:]]*$')
   echo $o
 }
 
-function backup(){
+function backup() {
   local backup_dir=backup-$(date +'%d_%m_%Y')
   local format='zip'
   local backup='backup.txt'
